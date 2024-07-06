@@ -9,7 +9,7 @@ const LoginForm = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        // Fetch users data from FakeStoreAPI (assuming it provides users data)
+        
         fetch('https://fakestoreapi.com/users')
             .then(response => response.json())
             .then(data => setUsers(data))
@@ -30,14 +30,14 @@ const LoginForm = () => {
 
         if (user && user.password === formData.password) {
             console.log('Login successful:', user);
-            // Handle successful login, e.g., save token, redirect user, etc.
+        
             setLoginError('');
         } else {
             console.error('Login error: Invalid credentials');
             setLoginError('Invalid credentials. Please try again.');
         }
 
-        // Clear the form (optional)
+        
         setFormData({
             email: '',
             password: ''
