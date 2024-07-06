@@ -4,10 +4,10 @@ const ShoppingCart = () => {
   const [cart, setCart] = useState([]);
   const [products, setProducts] = useState({});
   const [loading, setLoading] = useState(true);
-  const [show, setShow] = useState(false); // State for modal visibility
+  const [show, setShow] = useState(false); 
 
   useEffect(() => {
-    fetch('https://fakestoreapi.com/carts/1') // Fetching a specific cart for simplicity
+    fetch('https://fakestoreapi.com/carts/1') 
       .then(res => res.json())
       .then(cartData => {
         setCart(cartData.products);
